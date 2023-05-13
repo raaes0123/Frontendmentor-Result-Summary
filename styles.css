@@ -1,0 +1,152 @@
+:root {
+--Light_red: hsl(0, 100%, 67%);
+--Orangey_yellow: hsl(39, 100%, 56%);
+--Green_teal: hsl(166, 100%, 37%);
+--Cobalt_blue: hsl(234, 85%, 45%);
+
+/*Gradients*/
+
+--Light_slate_blue_background: hsl(252, 100%, 67%);
+--Light_royal_blue_background: hsl(241, 81%, 54%);
+
+--Violet_blue_circle: hsla(256, 72%, 46%, 1);
+--Persian_blue_circle: hsla(241, 72%, 46%, 0);
+/*Neutral*/
+
+--White: hsl(0, 0%, 100%);
+--Pale_blue: hsl(221, 100%, 96%);
+--Light_lavender: hsl(241, 100%, 89%);
+--Dark_gray_blue: hsl(224, 30%, 27%);
+--Box-height: 380px;
+--Box-width: 300px;
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(267, 50%, 42%); }
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.result-summary {
+    height: var(--Box-height);
+    width: calc(var(--Box-width) * 2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Hanken Grotesk', sans-serif;
+    box-shadow: 5px 15px 40px var(--Light_lavender) ;
+    border-radius: 4%;
+}
+.box {
+    height: calc(var(--Box-height) - 10px); /*The + and - operators must be surrounded by whitespace.*/
+    width: calc(var(--Box-width) - 10px);   /*Default margin is 20px I think*/
+    padding: 1%;
+    margin: 0%;
+}
+.result {
+    background: linear-gradient(180deg,hsl(252, 100%, 67%),hsl(241, 81%, 54%));
+    border-radius: 4%;
+    text-align: center;
+}
+.result h1 {
+    color: var(--Pale_blue);
+    font-size: 48px;
+}
+.result h3 {
+    color: var(--Light_lavender);
+}
+.result h2 {
+    color: var(--Pale_blue)
+}
+.result p {
+    color: var(--Light_lavender);
+    padding-left: 1%;
+    padding-right: 1%;
+    font-size: 14px;
+}
+.score {
+    background: linear-gradient(180deg,hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
+    padding: 1%;
+    width: 9em;
+    height: 9em;
+    border-radius: 50%;
+    margin: auto;
+}
+.score h1 {
+    margin-bottom: -5%;
+}
+.card{
+    display:flex;
+    justify-content: space-between;
+    padding: 4%;
+    margin: 5%;
+    border-radius: 0.5rem;
+    font-size: 14px;
+}
+.flex-group{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+#r1 {
+    background-color: hsla(0, 100%, 67%,0.1);
+}
+#r1 .topic{
+    color: hsl(0, 100%, 67%);
+}
+#r2 {
+    background-color: hsl(39, 100%, 56%, 0.1);
+}
+#r2 .topic{
+    color: hsl(39, 100%, 56%);
+}
+#r3 {
+    background-color: hsl(166, 100%, 37%, 0.1);
+}
+#r3 .topic{
+    color: hsl(166, 100%, 37%);
+}
+#r4 {
+    background-color: hsl(234, 85%, 45%,0.1);
+}
+#r4 .topic{
+    color: hsl(234, 85%, 45%);
+}
+.card .marks{
+    font-weight: bold;
+}
+
+.summary h3{
+    margin: 5%;
+    font-weight: lighter;
+}
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button {
+    background-color: var(--Dark_gray_blue);
+    border: none;
+    padding: 4% 30%;
+    border-radius: 2em;
+    color: hsl(0, 0%, 100%);
+    margin-top: 4%;
+}
+button:hover{
+    background-color: hsl(241, 81%, 54%);
+}
+
+@media (max-width: 645px) {
+    .result-summary {
+        flex-direction: column;
+        width: var(--Box-width);
+        height: calc(var(--Box-height) * 2);
+    }
+    .box {
+        height: calc(var(--Box-height) - 5px); /*The + and - operators must be surrounded by whitespace.*/
+        width: calc(var(--Box-width) - 5px);   /*Default margin is 20px I think*/
+    }
+}
